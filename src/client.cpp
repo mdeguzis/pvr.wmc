@@ -297,7 +297,7 @@ extern "C" {
 	{
 	}
 
-	PVR_ERROR GetAddonCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
+	void GetCapabilities(PVR_ADDON_CAPABILITIES* pCapabilities)
 	{
 		pCapabilities->bSupportsEPG					= true;
 		pCapabilities->bSupportsTV					= true;
@@ -312,8 +312,6 @@ extern "C" {
 		pCapabilities->bSupportsRecordingPlayCount	= true;
 		pCapabilities->bSupportsLastPlayedPosition	= g_bEnableMultiResume;
 		pCapabilities->bSupportsRecordingEdl		= false;
-
-		return PVR_ERROR_NO_ERROR;
 	}
 
 	const char *GetBackendName(void)
